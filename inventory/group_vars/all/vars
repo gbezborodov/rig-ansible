@@ -1,0 +1,26 @@
+etc_pool: ethereum.viabtc.com
+etc_port: 3333
+etc_user: '0xc4094bc22cc152c7da29e125e56a84cf71c273ed'
+etc_pass: x
+etc_email: "gbezborodov@gmail.com"
+
+eth_pool: ethereum.viabtc.com
+eth_port: 3333
+eth_user: '0xf3253f6ec5820bcba119764525ad83fea84ea560'
+eth_pass: x
+eth_email: "gbezborodov@gmail.com"
+
+zec_pool: zec-eu1.nanopool.org
+zec_port: 6666
+zec_user: t1b7BURZZecGoDJWLGrRrstcbZaMZPuK3ya
+zec_pass: x
+zec_email: "gbezborodov@gmail.com"
+
+#xforsa
+zcl_pool: zcl.2miners.com  
+zcl_port: 2020
+zcl_user: t1dyTf1acYiCtUhGEZJZGuEtLSS93CpDK7y
+zcl_pass: x
+zcl_email: "gbezborodov@gmail.com"
+
+nfgjeir: nfjwe

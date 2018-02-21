@@ -1,0 +1,35 @@
+- hosts: all
+  tasks: 
+    - name: install packages
+      dnf:
+        name: "{{ item }}"
+        state: latest
+      with_items:
+      - sudo
+      - vim
+      - htop
+      - iotop
+      - wget
+      - tar
+      - libselinux-python
+      - python-urlgrabber
+      - python2-pycurl
+      - python2-pygpgme
+      - pyxattr
+      - yum-metadata-parser
+      - yum 
+      - screen
+  tags: packages
+  become: yes
+
+- hosts: all
+  roles:
+     - singleplatform-eng.users
+  tags: users
+  become: yes
+
+- hosts: all
+  roles:
+     - knopki.sudoers
+  tags: sudoers
+  become: yes

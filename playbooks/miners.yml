@@ -1,0 +1,6 @@
+- hosts: all
+  roles:
+     - xforsa.miners
+  tags: miners
+  become: yes
+

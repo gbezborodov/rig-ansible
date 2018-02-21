@@ -1,0 +1,13 @@
+### P1 ###
+
+[zcl]
+192.168.31.208 #gb-home rig7
+
+[zec]
+#192.168.31.208 #gb-home rig7
+
+[eth]
+#192.168.31.208 #gb-home rig7
+
+[etc]
+#192.168.31.208 #gb-home rig7

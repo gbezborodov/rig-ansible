@@ -1,0 +1,19 @@
+[Unit]
+Description=Mine ETH
+
+[Service]
+Environment=GPU_FORCE_64BIT_PTR=0
+Environment=GPU_MAX_HEAP_SIZE=100
+Environment=GPU_USE_SYNC_OBJECTS=1
+Environment=GPU_MAX_ALLOC_PERCENT=100
+Environment=GPU_SINGLE_ALLOC_PERCENT=100
+
+Environment=DISPLAY=:0
+
+WorkingDirectory=/opt/ethminer
+ExecStart=/opt/ethminer/bin/ethminer --farm-recheck 200 -U -S {{ eth_pool }}:{{ eth_port }} -O {{ eth_user }}.{{ ansible_hostname }}
+
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

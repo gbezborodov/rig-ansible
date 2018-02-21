@@ -1,0 +1,70 @@
+- name: Create dstms directory
+  file: path=/opt/dstms.zcash state=directory
+- name: Create ethminer
+  file: path=/opt/ethminer state=directory
+- name: Create Claymore.s.Dual.Ethereum.Decred_Siacoin_Lbry_Pascal.AMD.NVIDIA.GPU.Miner dir
+  file: path=/opt/claymore.dual state=directory
+- name: Extract dstms.zcash miner
+  unarchive:
+    src: "zm_0.6.tar.gz"
+    dest: /opt/dstms.zcash
+- name: Extract ethminer
+  unarchive:
+    src: "ethminer-0.13.0-Linux.tar.gz"
+    dest: /opt/ethminer
+- name: Extract claymore.dual
+  unarchive:
+    src: "Claymore.s.Dual.Ethereum.Decred_Siacoin_Lbry_Pascal.AMD.NVIDIA.GPU.Miner.v10.0.-.LINUX.tar.gz"
+    dest: /opt/claymore.dual
+- name: Create ZEC unit
+  template: 
+    src: zec.service.j2 
+    dest: /lib/systemd/system/zec.service 
+    mode: 644
+  notify:
+    - reload systemctl
+- name: Create ZCL unit
+  template:
+    src: zcl.service.j2
+    dest: /lib/systemd/system/zcl.service
+    mode: 644
+  notify:
+    - reload systemctl
+- name: Create ETH unit
+  template:
+    src: eth.service.j2
+    dest: /lib/systemd/system/eth.service
+    mode: 644
+  notify:
+    - reload systemctl
+- name: Create ETC unit
+  template:
+    src: etc.service.j2
+    dest: /lib/systemd/system/etc.service
+    mode: 644
+  notify:
+    - reload systemctl
+
+- name: Check ZEC service
+  systemd:
+    name: zec
+    enabled: "{{ zec_status }}"
+    state: "{{ zec_state }}"
+
+- name: Check ZCL service
+  systemd:
+    name: zcl
+    enabled: "{{ zcl_status }}"
+    state: "{{ zcl_state }}"
+
+- name: Check ETH service
+  systemd:
+    name: eth
+    enabled: "{{ eth_status }}"
+    state: "{{ eth_state }}"
+
+- name: Check ETC service
+  systemd:
+    name: etc
+    enabled: "{{ etc_status }}"
+    state: "{{ etc_state }}"

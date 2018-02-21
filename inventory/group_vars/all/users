@@ -1,0 +1,22 @@
+users:
+  - username: gbezborodov
+    name: Grigory Bezborodov
+    ssh_key:
+      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6kMF2jEQckcUxt0MJ6ez/zH5roL6ZW7TwsDMJ096y8zUSe068GyHvrvahjHIPrn+ypU2nOUBU7Nf+9sPPnrZ2ymqJCMW33qRRwtNv171TD0H2LslAn2out6b9aTfBflM6NSFkctRtw9hLh9hd/PR1Qvnkg0UNt1Q9L5PSZ33fDmJa5DekBH6ij0/jbZoP2p9rynYYAJAHTJI/zu0fFQG/qzW99DWxLc0ZNr3qMj69vtAVYyrn6qOae9Wjz33U5Wd3C6WrVwLSvyJVOluahlFoSFvqhhLL5Pl+tXDD+CaVF1/4qKXnCMl09C+fzwDNFJ6niMVICflZ2hbv9DgTXGd7 gbezborodov@MacBook-Pro-Grigory.local"
+  - username: roke
+    name: roke
+    ssh_key:
+      - "ssh-rsa blahblahblah"
+sudoers:
+  - name: "gbezborodov"
+    filename: "gbezborodoc"
+    users:
+      - "ALL"
+    commands:
+      - "ALL"
+  - name: "roke"
+    filename: "roke"
+    users:
+      - "ALL"
+    commands:
+      - "ALL"

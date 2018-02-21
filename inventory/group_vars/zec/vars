@@ -1,0 +1,11 @@
+zcl_status: false
+zcl_state: stopped
+
+zec_status: true
+zec_state: started
+
+eth_status: false
+eth_state: stopped
+
+etc_status: false
+etc_state: stopped

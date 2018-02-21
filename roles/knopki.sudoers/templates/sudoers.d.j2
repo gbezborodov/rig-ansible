@@ -1,0 +1,4 @@
+# {{ ansible_managed }}
+{% for commands in item.commands %}
+{{ item.name }} ALL=({{ item.users | join(',') }}) {% if sudoers_nopasswd %}NOPASSWD:{% endif %}{{ commands }}
+{% endfor %}

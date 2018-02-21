@@ -1,0 +1,20 @@
+[Unit]
+Description=Mine ZCL
+
+[Service]
+Environment=GPU_FORCE_64BIT_PTR=0
+Environment=GPU_MAX_HEAP_SIZE=100
+Environment=GPU_USE_SYNC_OBJECTS=1
+Environment=GPU_MAX_ALLOC_PERCENT=100
+Environment=GPU_SINGLE_ALLOC_PERCENT=100
+
+Environment=DISPLAY=:0
+#Environment=XAUTHORITY=/home/xforsa/.Xauthority
+
+WorkingDirectory=/opt/dstms.zcash/zm_0.6/
+ExecStart=/opt/dstms.zcash/zm_0.6/zm --server {{ zcl_pool }} --port {{ zcl_port }} --user {{ zcl_user }}.{{ ansible_hostname }}
+
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
