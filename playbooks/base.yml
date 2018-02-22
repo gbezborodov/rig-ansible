@@ -19,6 +19,11 @@
       - yum-metadata-parser
       - yum 
       - screen
+    - name: reboot on panic
+      sysctl:
+        name: kernel.panic
+        value: 10
+        state: present
   tags: packages
   become: yes
 

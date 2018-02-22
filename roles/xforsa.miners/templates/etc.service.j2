@@ -11,7 +11,8 @@ Environment=GPU_SINGLE_ALLOC_PERCENT=100
 Environment=DISPLAY=:0
 
 WorkingDirectory=/opt/ethminer
-ExecStart=/opt/ethminer/bin/ethminer --farm-recheck 200 -U -S {{ etc_pool }}:{{ etc_port }} -O {{ etc_user }}.{{ ansible_hostname }}
+#ExecStart=/opt/ethminer/bin/ethminer --farm-recheck 200 -U -S {{ etc_pool }}:{{ etc_port }} -O {{ etc_user }}.{{ ansible_hostname }}
+ExecStart=/opt/claymore.dual/ethdcrminer64 -epool {{ etc_pool }}:{{ etc_port }} -ewal {{ etc_user }}.{{ ansible_hostname }} -mode 1 -dbg -1
 
 Restart=always
 

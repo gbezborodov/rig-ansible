@@ -12,7 +12,7 @@ Environment=DISPLAY=:0
 #Environment=XAUTHORITY=/home/xforsa/.Xauthority
 
 WorkingDirectory=/opt/dstms.zcash/zm_0.6/
-ExecStart=/opt/dstms.zcash/zm_0.6/zm --server {{ zcl_pool }} --port {{ zcl_port }} --user {{ zcl_user }}.{{ ansible_hostname }}/{{ zec_email }}
+ExecStart=/opt/dstms.zcash/zm_0.6/zm --server {{ zec_pool }} --port {{ zec_port }} --user {{ zec_user }}.{{ ansible_hostname }}/{{ zec_email }}
 
 Restart=always
 
