@@ -1,37 +1,29 @@
-#roke
 etc_pool: ethereum.viabtc.com
 etc_port: 3333
 etc_user: '0xc4094bc22cc152c7da29e125e56a84cf71c273ed'
 etc_pass: x
 etc_email: "gbezborodov@gmail.com"
-
-#alex
 eth_pool: ethereum.viabtc.com
 eth_port: 3333
 eth_user: '0xf3253f6ec5820bcba119764525ad83fea84ea560'
 eth_pass: x
 eth_email: "gbezborodov@gmail.com"
-
-#xforsa
 zec_pool: zec-eu1.nanopool.org
 zec_port: 6666
 zec_user: t1b7BURZZecGoDJWLGrRrstcbZaMZPuK3ya
 zec_pass: x
 zec_email: "gbezborodov@gmail.com"
-
-#xforsa
-zcl_pool: zcl.2miners.com  
+zcl_pool: zcl.2miners.com
 zcl_port: 2020
 zcl_user: t1dyTf1acYiCtUhGEZJZGuEtLSS93CpDK7y
 zcl_pass: x
 zcl_email: "gbezborodov@gmail.com"
 
-zabbix_agent_server: 192.168.88.107
-zabbix_agent_serveractive: 192.168.88.107
-zabbix_version: 3.2
-zabbix_agent_package_state: present
-zabbix_agent_logfilesize: 0
-zabbix_agent_listenip: 0.0.0.0
-zabbix_agent_hostname: "{{ ansible_hostname }}"
-zabbix_agent_include: /opt/zabbix/etc
-zabbix_agent_enableremotecommands: 1
+zcl_status: true
+zcl_state: started
+zec_status: false
+zec_state: stopped
+eth_status: false
+eth_state: stopped
+etc_status: false
+etc_state: stopped
