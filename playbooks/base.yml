@@ -39,8 +39,8 @@
   tags: sudoers
   become: yes
 
-- hosts: all
-  roles:
-    - dj-wasabi.zabbix-agent
-  tags: zabbix-agent
-  become: yes
+#- hosts: all
+#  roles:
+#    - dj-wasabi.zabbix-agent
+#  tags: zabbix-agent
+#  become: yes
