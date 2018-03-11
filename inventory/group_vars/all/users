@@ -20,7 +20,3 @@ sudoers:
       - "ALL"
     commands:
       - "ALL"
-  - username: root
-    name: root
-    ssh_key:
-      - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDUbpzD2BVh68jJNcUybTONzCwZjgUgAIPeDyLYOnBMrMSuWSr1/mhjDzpp5ulOlInQwoBWWEJQMzBjqEuUpINdH7s/k4L/VeL60UhcZH4YRmLLlUhk2GNcqUtJbfg0Bw3hUQXi0gaOua/znkcqU1YrHu8HTrXy4PjV4CR2QobKyqsdmHF6xMVpFSJ7ZVZ503O6E8Na+1PEYU9z0C3WGjAVit+8Wxv0ix5mo8FPssNKQmUUYv2Q/UvIj81AjR7+FKbJHUdU2ow6UEDHtdSNNNTdezTS9AxxlV4OHjUQPeXbq4+uVwu3sC0zBcKf9SDjsNnrX30dc9NbDMz80T4gIWZx root@mi-go"
