@@ -7,6 +7,9 @@
 - name: Create Claymore.s.Dual.Ethereum.Decred_Siacoin_Lbry_Pascal.AMD.NVIDIA.GPU.Miner dir
   file: path=/opt/claymore.dual state=directory
 
+- name: Create viabtc-eth-miner dir
+  file: path=/opt/viabtc-eth-miner state=directory
+
 - name: Extract dstms.zcash miner
   unarchive:
     src: "zm_0.6.tar.gz"
@@ -21,6 +24,11 @@
   unarchive:
     src: "Claymore.s.Dual.Ethereum.Decred_Siacoin_Lbry_Pascal.AMD.NVIDIA.GPU.Miner.v10.0.-.LINUX.tar.gz"
     dest: /opt/claymore.dual
+
+- name: Extract viabtc miner
+  unarchive:
+    src: "viabtc-eth-miner.zip"
+    dest: /opt/viabtc-eth-miner
 
 - name: Create ZEC unit
   template: 
