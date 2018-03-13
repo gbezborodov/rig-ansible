@@ -14,7 +14,7 @@ Environment=DISPLAY=:0
 #WorkingDirectory=/opt/ethminer
 WorkingDirectory=/opt/claymore.dual
 #ExecStart=/opt/ethminer/bin/ethminer --farm-recheck 200 -U -S {{ eth_pool }}:{{ eth_port }} -O {{ eth_user }}.{{ ansible_hostname }}
-ExecStart=/opt/claymore.dual/ethdcrminer64 -epool {{ eth_pool }}:{{ eth_port }} -ewal {{ eth_user }}/{{ ansible_hostname }}/{{ eth_email }} -epsw x -mode 1 -dbg -1
+ExecStart=/opt/claymore.dual/ethdcrminer64 -epool {{ eth_pool }}:{{ eth_port }} -ewal {{ eth_user }}/{{ ansible_hostname }}/{{ eth_email }} -epsw x -mode 1 -dbg -1 -allpools 1
 #ExecStart=/opt/viabtc-eth-miner/viabtc-eth-miner/linux/eth-miner/ethminer --farm-recheck 200 -U -F http://192.168.2.211:8181/{{ ansible_hostname }}
 
 Restart=always
