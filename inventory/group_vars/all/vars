@@ -6,8 +6,8 @@ etc_pass: x
 etc_email: "gbezborodov@gmail.com"
 
 #alex
-eth_pool: ethereum.viabtc.com
-eth_port: 3333
+eth_pool: eth-eu1.nanopool.org
+eth_port: 9999
 eth_user: '0xf3253f6ec5820bcba119764525ad83fea84ea560'
 eth_pass: x
 eth_email: "gbezborodov@gmail.com"
