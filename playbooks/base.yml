@@ -19,6 +19,9 @@
       - yum-metadata-parser
       - yum 
       - screen
+      - gtk3
+      - Xorg
+      - libXv
     - name: reboot on panic
       sysctl:
         name: kernel.panic
