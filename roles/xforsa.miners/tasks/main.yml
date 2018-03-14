@@ -62,6 +62,22 @@
   notify:
     - reload systemctl
 
+- name: Create xorg unit
+  template:
+    src: xorg.service.j2
+    dest: /lib/systemd/system/xorg.service
+    mode: 644
+  notify:
+    - reload systemctl
+
+- name: Create overclock unit
+  template:
+    src: overclock.service.j2
+    dest: /lib/systemd/system/overclock.service
+    mode: 644
+  notify:
+    - reload systemctl
+
 - name: Check ZEC service
   systemd:
     name: zec
@@ -85,3 +101,13 @@
     name: etc
     enabled: "{{ etc_status }}"
     state: "{{ etc_state }}"
+
+- name: xorg service 4 overclocking
+  systemd:
+    name: xorg
+    enabled: true
+
+- name: overclock service 
+  systemd:
+    name: overclock
+    enabled: true
