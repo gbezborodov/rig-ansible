@@ -1,0 +1,10 @@
+[Unit]
+Description=overclocking gpus
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c 'sleep 60 && nvidia-smi -pm 1 && nvidia-smi -pl 140 && for i in 0 1 2 3 4 5; do nvidia-settings -c :0 -a [gpu:$i]/GPUMemoryTransferRateOffset[3]=1300 ; done'
+
+[Install]
+WantedBy=default.target

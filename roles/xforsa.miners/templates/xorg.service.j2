@@ -1,0 +1,10 @@
+[Unit]
+Description=overclocking gpus
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/startx
+
+[Install]
+WantedBy=default.target
