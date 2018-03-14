@@ -22,6 +22,10 @@
       - gtk3
       - Xorg
       - libXv
+      - twm
+      - libXNVCtrl
+      - xdm
+      - xhost
     - name: reboot on panic
       sysctl:
         name: kernel.panic
