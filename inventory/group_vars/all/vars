@@ -6,9 +6,9 @@ etc_pass: x
 etc_email: "gbezborodov@gmail.com"
 
 #alex
-eth_pool: eth-eu1.nanopool.org
-eth_port: 9999
-eth_user: '0xf3253f6ec5820bcba119764525ad83fea84ea560'
+eth_pool: eu1.ethermine.org
+eth_port: 4444
+eth_user: '0x7C223aCF6a2F5C9E68D52C17021945079Fb9117e'
 eth_pass: x
 eth_email: "gbezborodov@gmail.com"
 
